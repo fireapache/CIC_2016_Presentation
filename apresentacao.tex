@@ -94,7 +94,7 @@
 		\begin{itemize}
 			\item Ferramentas matemáticas para a \textbf{decomposição hierárquica de funções}
             \item Utilizadas em \textbf{análise de sinais} para identificação de detalhes \cite{brito1998}
-            \item Principal caracterização consiste na \textbf{composição dos sinais transformados para os originais}
+            \item Importante característica consiste na \textbf{composição} dos sinais transformados \textbf{reconstuindo} o sinal original
 		\end{itemize}
 	\end{block}
 
@@ -165,7 +165,7 @@
 	\item \textbf{Otimização da extensão intervalar} para as Transformadas Wavelet de \textbf{Haar} (TWH) e de \textbf{Daubechies} (TWD)~\cite{stollnitz1995} 
 	\begin{itemize}
 	\item \textbf{Abordagens}: não-normalizada não-padrão, não-normalizada padrão, normalizada não-padrão e normalizada padrão
-	\item \textbf{Multi-dimensionais}: TDW 1D e 2D
+	\item \textbf{Multi-dimensionais}: 1D e 2D
 	\item \textbf{Etapas}: transformação direta (decomposição) e de inversa (composição)	
 	\end{itemize}
 
@@ -806,9 +806,9 @@ Desenvolvidos   & $n\log(n) + n$ & $n^2\log(n) + n^2$ & $n^2 + \log(\log(n) + \l
     		\item Pelas métricas aplicadas, as otimizações da biblioteca Int-DWTs alcançaram ganhos satisfatórios quanto a \textbf{exatidão dos cálculos} e \textbf{qualidade dos resultados}
     		\begin{itemize}
     		\item versões intervalares dos algoritmos originais
-    		\item algoritmos otimizados (12 $\times$ 2)
+    		\item algoritmos otimizados (12)
     		\end{itemize} 
-         \item Pela análise da complexidade algorítmica,  foram discutidas as principais causas  da perda de desempenho
+         \item Pela análise do número de operações, foram discutidas as principais causas  da perda de desempenho
     	\end{itemize}
     \end{block}
     
@@ -816,7 +816,7 @@ Desenvolvidos   & $n\log(n) + n$ & $n^2\log(n) + n^2$ & $n^2 + \log(\log(n) + \l
     	\begin{itemize}
     		\item Implementação concorrente dos algoritmos da biblioteca Int-DWTs  suavisando execução em GPU
     		
-    		\item Extensão da biblioteca Int-DWTs para classes de Transformadas  Wavelet Discretas
+    		\item Extensão da biblioteca Int-DWTs para outras classes de Transformadas Wavelet Discretas
     		
     		\item Utilização das otimizações da biblioteca Int-DWTs em aplicações na Bioinformática e no Processamento de Sinais
     	\end{itemize}
