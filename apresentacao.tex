@@ -92,9 +92,9 @@
 	
 	\begin{block}{Transformadas Wavelets}
 		\begin{itemize}
-			\item As Transformadas Wavelets (TWs) são ferramentas matemáticas para a \textbf{decomposição} hierárquica de funções.
-            \item Utilizadas em \textbf{análise} de sinais para identificação de detalhes \cite{brito1998}.
-            \item Uma característica importante das TWs é a \textbf{composição} dos sinais transformados para os originais.
+			\item Ferramentas matemáticas para a \textbf{decomposição hierárquica de funções}
+            \item Utilizadas em \textbf{análise de sinais} para identificação de detalhes \cite{brito1998}
+            \item Principal caracterização consiste na \textbf{composição dos sinais transformados para os originais}
 		\end{itemize}
 	\end{block}
 
@@ -109,31 +109,31 @@
 %		\end{itemize}
 %	\end{block}	
 	
-	\begin{block}{Aplicações}
+	\begin{block}{Aplicações em Bioinformática e Processamento de Imagens}
 		\begin{itemize}
-            \item \textbf{compressão de imagens} \cite{JPEG2000}, remoção de ruído \cite{donoho1995}.
-            \item Análise de sinais de eletroencefalogramas \cite{Silveira2016}.
-            \item Reconstrução de marcas d'água invisíveis em imagens digitais \cite{minamoto2010}.
-            \item Filtragem sinais cardíacos através de Algoritmos Adaptativos \cite{perin2013}.
-            \item Descrição de parâmetros estatísticos em exames de mamografia \cite{mohammad2013}.
+            \item \textbf{Compressão de imagens} \cite{JPEG2000} e remoção de ruído~\cite{donoho1995}
+            \item Análise de \textbf{sinais de eletroencefalogramas}~\cite{Silveira2016}
+            \item \textbf{Reconstrução de marcas d'água} invisíveis em imagens digitais~\cite{minamoto2010}
+            \item Filtragem \textbf{sinais cardíacos} através de algoritmos adaptativos~\cite{perin2013}
+            \item Descrição de parâmetros estatísticos em \textbf{exames de mamografia}~\cite{mohammad2013}.
 		\end{itemize}
 	\end{block}	
 }
 
-\frame
-{
-	\frametitle{Referências de Aplicações}
-	
-	\scriptsize
-	
-	\vspace{-0.1cm}
-	
-	\bibliographystyle{unsrt}
-	\bibliography{apresentacao}
-	
-	
-	
-}
+%\frame
+%{
+%	\frametitle{Referências de Aplicações}
+%	
+%	\scriptsize
+%	
+%	\vspace{-0.1cm}
+%	
+%	\bibliographystyle{unsrt}
+%	\bibliography{apresentacao}
+%	
+%	
+%	
+%}
 
 
 %%%%%%%%%%%%%%%%%%% SLIDE %%%%%%%%%%%%%%%%%%%
@@ -150,23 +150,23 @@
 %%%%%%%%%%%%%%%%%%% SLIDE %%%%%%%%%%%%%%%%%%%
 \frame{
 	\frametitle{}
-	\begin{block}{\textbf{Principal Contribuição}}
+	\begin{block}{\textbf{Principais Objetivos}}
 	\small
 	\begin{itemize}
-	\item Desenvolvimento da biblioteca \textbf{Int-DWTs} com implementações intervalares e otimizadas para Transformadas Discretas Wavelet (TDWs). \cite{DAUBTHESIS,daub1988}
-    \item Prover resultados intervalares confiáveis e automaticamente validados a aplicações que utilizam de TWDs, com foco em Computação Científica. \cite{Moore79,cxsc3}
+	\item Desenvolver a biblioteca \textbf{Int-DWTs} com implementações intervalares e otimizadas para Transformadas Wavelet Discretas (TDWs)~\cite{DAUBTHESIS,daub1988}
+    \item Prover \textbf{resultados  confiáveis e automaticamente validados} para aplicações que utilizam de TWDs com foco em Computação Científica~\cite{Moore79,cxsc3}
+    \item Aplicar \textbf{métricas de avaliação da qualidade} nos algoritmos implementados 
 \end{itemize}	
 	\end{block}
 
-\begin{block}{\textbf{Objetivos Alcançados}}
+\begin{block}{\textbf{Principais Contribuições}}
 	\small
 	\begin{itemize}
-	\item Estudo, \textbf{otimização} e implementação da \textbf{extensão intervalar} para as Transformadas Wavelet de \textbf{Haar} (TWH) e de \textbf{Daubechies} (TWD). \cite{stollnitz1995}
-	
-	\item Implementar as seguintes abordagens:
+	\item \textbf{Otimização da extensão intervalar} para as Transformadas Wavelet de \textbf{Haar} (TWH) e de \textbf{Daubechies} (TWD)~\cite{stollnitz1995} 
 	\begin{itemize}
-	\item \textbf{Abordagens}: não-normalizada não-padrão, não-normalizada padrão, normalizada não-padrão e normalizada padrão;
-	\item \textbf{Etapas}: transformação direta (decomposição) e de transformação inversa (composição).	
+	\item \textbf{Abordagens}: não-normalizada não-padrão, não-normalizada padrão, normalizada não-padrão e normalizada padrão
+	\item \textbf{Multi-dimensionais}: TDW 1D e 2D
+	\item \textbf{Etapas}: transformação direta (decomposição) e de inversa (composição)	
 	\end{itemize}
 
 \end{itemize}	
@@ -468,22 +468,7 @@
 %	\end{block}
 %}
 
-\subsection*{Algoritmos 2D}
 
-\frame
-{
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{c c}
-
-        \cr \includegraphics[width=5cm]{Imagens/standard.png} & \includegraphics[width=5cm]{Imagens/nonstandard.png}
-
-        \cr (a) Algoritmo Padrão & (b) Algoritmo Não-Padrão
-
-    \end{tabular}
-    \label{table:nonlin}
-\end{table}
-}
 
 %\frame
 %{
@@ -520,6 +505,11 @@
 
 \frame
 {
+
+\frametitle{Simplificação dos Irracionais nos Filtros: $h, g, ih, ig$}
+
+
+
 	\begin{eqnarray}
 	h & = & a\left(\frac{1+\sqrt{3}}{4\sqrt{2}}\right) + b\left(\frac{3+\sqrt{3}}{4\sqrt{2}}\right) + c\left(\frac{3-\sqrt{3}}{4\sqrt{2}}\right) + d\left(\frac{1-\sqrt{3}}{4\sqrt{2}}\right) \nonumber \\
 	 & = & \frac{a\left(1+\sqrt{3}\right) + b\left(3+\sqrt{3}\right) + c\left(3-\sqrt{3}\right) + d\left(1-\sqrt{3}\right)}{4\sqrt{2}} \nonumber \\
@@ -530,6 +520,8 @@
 
 \frame
 {
+\frametitle{Simplificação dos Irracionais nos Filtros: $h, g, ih, ig$}
+
 \begin{eqnarray}
 	g & = & a\left(\frac{1-\sqrt{3}}{4\sqrt{2}}\right) + b\left(\frac{\sqrt{3}-3}{4\sqrt{2}}\right) + c\left(\frac{3+\sqrt{3}}{4\sqrt{2}}\right) + d\left(\frac{-1-\sqrt{3}}{4\sqrt{2}}\right) \nonumber \\
 	 & = & \frac{a\left(1-\sqrt{3}\right) + b\left(\sqrt{3}-3\right) + c\left(3+\sqrt{3}\right) + d\left(-1-\sqrt{3}\right)}{4\sqrt{2}} \nonumber \\
@@ -540,6 +532,8 @@
 
 \frame
 {
+\frametitle{Simplificação dos Irracionais nos Filtros: $h, g, ih, ig$}
+
 \begin{eqnarray}
 	ih & = & a\left(\frac{3-\sqrt{3}}{4\sqrt{2}}\right) + b\left(\frac{3+\sqrt{3}}{4\sqrt{2}}\right) + c\left(\frac{1+\sqrt{3}}{4\sqrt{2}}\right) + d\left(\frac{1-\sqrt{3}}{4\sqrt{2}}\right) \nonumber \\
 	 & = & \frac{a\left(3-\sqrt{3}\right) + b\left(3+\sqrt{3}\right) + c\left(1+\sqrt{3}\right) + d\left(1-\sqrt{3}\right)}{4\sqrt{2}} \nonumber \\
@@ -550,6 +544,8 @@
 
 \frame
 {
+\frametitle{Simplificação dos Irracionais nos Filtros: $h, g, ih, ig$}
+
 \begin{eqnarray}
 	ig & = & a\left(\frac{1-\sqrt{3}}{4\sqrt{2}}\right) + b\left(\frac{-1-\sqrt{3}}{4\sqrt{2}}\right) + c\left(\frac{3+\sqrt{3}}{4\sqrt{2}}\right) + d\left(\frac{\sqrt{3}-3}{4\sqrt{2}}\right) \nonumber \\
 	 & = & \frac{a\left(1-\sqrt{3}\right) + b\left(-1-\sqrt{3}\right) + c\left(3+\sqrt{3}\right) + d\left(\sqrt{3}-3\right)}{4\sqrt{2}} \nonumber \\
@@ -557,6 +553,24 @@
 	 & = & \frac{a - b + 3\left(c - d\right) + \sqrt{3}\left(c + d - a - b\right)}{4\sqrt{2}} \label{eq:igOptFilter}
 \end{eqnarray}
 }
+
+\subsection*{Algoritmos 2D}
+
+\frame
+{
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c c}
+
+        \cr \includegraphics[width=5cm]{Imagens/standard.png} & \includegraphics[width=5cm]{Imagens/nonstandard.png}
+
+        \cr (a) Algoritmo Padrão & (b) Algoritmo Não-Padrão
+
+    \end{tabular}
+    \label{table:nonlin}
+\end{table}
+}
+
 
 \subsection*{Fatores de Normalização 2D}
 
@@ -567,7 +581,7 @@
 	\includegraphics[width=10cm]{Imagens/DaubNormFactors.png}
 	\small
 	
-	(a) níveis de aplicação, (b) combinação de níveis, (c) regra de normalização.
+	(a) níveis de aplicação, (b) combinação de níveis, (c) regra de normalização
 	
 }
 
@@ -578,13 +592,13 @@
 \frame{
     \frametitle{Metodologia}
     \begin{block}{}
-    	Estudo de caso:
+
     	\begin{itemize}
-    		\item \textbf{Performance}: Relação de desempenho das execuções.
-    		\item \textbf{Accuracy}: Relação entre o maior diâmetro de intervalo de erro na computação.
-    		\item \textbf{Metrics}: Aplicação de métricas (EUC, MSE e PSNR) para medição de qualidade.
+    		\item \textbf{Performance}: Relação de desempenho das execuções
+    		\item \textbf{Accuracy}: Relação entre o  diâmetro do intervalo e o erro na computação
+    		\item \textbf{Metrics}: Aplicação de medidas de qualidade dos resultados
     	\end{itemize}
-    	\vspace{-0.4cm}
+    	
     	\addtolength{\jot}{-0.4cm}
     	\begin{footnotesize}
     	\begin{eqnarray}
@@ -680,9 +694,9 @@
 		\begin{itemize}
 			\item \textbf{TWD 1D e 2D}
 			\begin{itemize}
-				\item \textbf{Teste \#1}: $2^{20}$ valores aleatórios
-				\item \st{Teste \#2}: $2^{22}$ valores aleatórios
-				\item \textbf{Teste \#3}: $2^{24}$ valores aleatórios
+				\item \textbf{Teste \#1}: $1024 \times 1024$ valores aleatórios - $2^{20}$ coeficientes
+				\item \st{Teste \#2}: $2048 \times 2048$ valores aleatórios - $2^{22}$ coeficientes
+				\item \textbf{Teste \#3}: $4096 \times 4096$ valores aleatórios -  $2^{24}$ coeficientes
 			\end{itemize}
 		\end{itemize}
 	\end{block}
@@ -761,42 +775,27 @@
 
 }
 
-%\frame
-%{
-%	\centering
-%	\includegraphics[width=6cm]{Imagens/test6NS-4096.png}
-%	
-%	\footnotesize
-%    Teste \#3 para a \textbf{TWD 2D Não-Padrão} utilizando 4096x4096 valores aleatórios.
-%}
+\frame
+{
+
+\frametitle{Número de Operações}
+
+\begin{table}[h!]
+\centering
+\caption{ TWD: número de operações por decomposição}
+\label{tab:Complexity-DaWT}
+\begin{tabular}{l|l|l|l}
+             & 1D             & 2D Padrão        & 2D Não-Padrão      \\ \hline
+Originais     & $n\log(n)$     & $n^2\log(n)$       & $n^2 + \log(\log(n) + \log(n))$\\
+Desenvolvidos   & $n\log(n) + n$ & $n^2\log(n) + n^2$ & $n^2 + \log(\log(n) + \log(n))$          
+\end{tabular}
+\end{table}
+
+}
 
 %%%%%%%%%%%%%%%%%% SLIDE %%%%%%%%%%%%%%%%%%%%%
 \section{Considerações Finais}
 
-\subsection*{Evolução do Trabalho}
-
-\frame
-{
-	%\frametitle{Evolução do Trabalho}
-    \begin{block}{Principais Publicações 2015-2016}
-		\begin{itemize}
-			\item  \textbf{ERAD 2015}: Estudo de Desempenho sobre a Biblioteca Int-Haar
-            \item  \textbf{SIM 2015}: Int-HWT: Increasing Performance and Exactitude of 1D and 2D Haar Wavelet Transforms
-            \item  \textbf{WEIT 2015}: Transformada de Haar Não Decimada Otimizada e sua Extensão Intervalar
-            \item  \textbf{ERAD 2016}: Transformada de Haar À Trous Otimizada e Análise de Desempenho
-            \item \textbf{CNMAC 2016}: Otimização para Aumento de Exatidão da Transformada Wavelet de Haar À-Trous
-            \item \textbf{TCC 2016/1}: Int-DWTs Library - Algebraic Simplifications Increasing Performance and
-Accuracy of Discrete Wavelet Transforms
-		\end{itemize}
-	\end{block}
-	
-	\begin{block}{Publicações Submetidas}
-	\begin{itemize}
-		\item Int-HWT: Algebraic Simplifications Increasing Performance And Exactitude of the Haar Wavelet Transforms
-		%\item Int-DWTs Library: Algebraic Simplifications Increasing Performance and Accuracy of Discrete Wavelet Transforms
-	\end{itemize}
-	\end{block}
-}
 
 \subsection*{Conclusão}
 
@@ -804,16 +803,22 @@ Accuracy of Discrete Wavelet Transforms
     %\frametitle{Conclusão}
     \begin{block}{Conclusão}
     	\begin{itemize}
-    		\item As otimizações propostas foram implementadas e validadas com sucesso.
-            \item A TWD obteve perdas de desempenho porém com ganhos satisfatórios quanto a exatidão dos cálculos.
-            \item A análise de complexidade algorítmica mostra a causa dos ganhos e perdas de desempenho.
+    		\item Pelas métricas aplicadas, as otimizações da biblioteca Int-DWTs alcançaram ganhos satisfatórios quanto a \textbf{exatidão dos cálculos} e \textbf{qualidade dos resultados}
+    		\begin{itemize}
+    		\item versões intervalares dos algoritmos originais
+    		\item algoritmos otimizados (12 $\times$ 2)
+    		\end{itemize} 
+         \item Pela análise da complexidade algorítmica,  foram discutidas as principais causas  da perda de desempenho
     	\end{itemize}
     \end{block}
     
     \begin{block}{Trabalhos Futuros}
     	\begin{itemize}
-    		\item O estudo, otimização e a implementação intervalar de outras Transformadas Discretas Wavelet.
-    		\item A implementação concorrente dos algoritmos da biblioteca Int-DWTs para execução em GPU.
+    		\item Implementação concorrente dos algoritmos da biblioteca Int-DWTs  suavisando execução em GPU
+    		
+    		\item Extensão da biblioteca Int-DWTs para classes de Transformadas  Wavelet Discretas
+    		
+    		\item Utilização das otimizações da biblioteca Int-DWTs em aplicações na Bioinformática e no Processamento de Sinais
     	\end{itemize}
     \end{block}
 }
@@ -851,6 +856,40 @@ Accuracy of Discrete Wavelet Transforms
 }
 
 \frame{\titlepage}
+
+
+
+\frame
+{
+    \centering
+    \Huge
+    Evolução do Trabalho
+}
+
+\frame
+{
+	%\frametitle{Evolução do Trabalho}
+    \begin{block}{Principais Publicações 2015-2016}
+		\begin{itemize}
+			\item  \textbf{ERAD 2015}: Estudo de Desempenho sobre a Biblioteca Int-Haar
+            \item  \textbf{SIM 2015}: Int-HWT: Increasing Performance and Exactitude of 1D and 2D Haar Wavelet Transforms
+            \item  \textbf{WEIT 2015}: Transformada de Haar Não Decimada Otimizada e sua Extensão Intervalar
+            \item  \textbf{ERAD 2016}: Transformada de Haar À Trous Otimizada e Análise de Desempenho
+            \item \textbf{CNMAC 2016}: Otimização para Aumento de Exatidão da Transformada Wavelet de Haar À-Trous
+            \item \textbf{TCC 2016/1}: Int-DWTs Library - Algebraic Simplifications Increasing Performance and
+Accuracy of Discrete Wavelet Transforms
+		\end{itemize}
+	\end{block}
+	
+	\begin{block}{Publicação em Periódico - Computational and Applied Mathematics}
+	\begin{itemize}
+		\item Int-HWT: Algebraic Simplifications Increasing Performance And Exactitude of the Haar Wavelet Transforms
+		%\item Int-DWTs Library: Algebraic Simplifications Increasing Performance and Accuracy of Discrete Wavelet Transforms
+	\end{itemize}
+	\end{block}
+}
+
+
 
 \frame
 {
